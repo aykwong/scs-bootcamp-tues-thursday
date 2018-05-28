@@ -1,0 +1,21 @@
+1. The JS Programming World has
+different types of objects
+	- objects have properties (talked about)
+	- objects have methods (talked about)
+	- objects have events (talk later)
+	- we use dot notation to
+2. Prorgams can receive input and output values
+	- values are often stored in
+	variables (later, properties)
+	- variables can store different types of values
+	- their values are often
+		- used to change what is shown on screen
+		- (or maybe the console for debugging)
+		- passed on for processing and storage
+3. Programs can have _control flow_
+	- decisions can be made (if...else if...else)
+	- processes can be repeated (loops)
+	- processes can grouped into steps to perform a task (functions, methods)
+	
+4. Developers would often employ patterns of code so that they can all write similarly within the same style.
+
