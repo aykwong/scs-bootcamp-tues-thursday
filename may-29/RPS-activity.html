@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var playerScore = 0;
+    var computerScore = 0;
+
+    for(var games = 0; games < 5 && playerScore < 3 && computerScore < 3; games++) {
+
+        var playerInput = prompt("Choose your hand symbol of choice! (R, P, S)");
+        var playerInput = playerInput.toUpperCase();
+        
+        var RPS = ["R", "P", "S"];
+
+        var computerGuess = RPS[Math.floor(Math.random() * RPS.length)];
+        
+        var result = "0";
+        
+        if(playerInput === "R") {
+
+            if(computerGuess === "P") {
+                var result = "Player wins!";
+                console.log("Player wins!");
+            } else if (computerGuess === "S") {
+                var result = "Computer wins!";
+                console.log("Computer wins!");
+            } else {
+                console.log("It's a tie!");
+        }
+
+        } else if (playerInput === "P") {
+
+            if(computerGuess === "P") {
+                console.log("It's a tie!");
+            } else if (computerGuess === "S") {
+                var result = "Computer wins!";
+                console.log("Computer wins!");
+            } else {
+                var result = "Player wins!";
+                console.log("Player wins!");
+        }
+
+        } else if (playerInput === "S") {
+
+            if(computerGuess === "P") {
+                var result = "Player wins!";
+                console.log("Player wins!");
+            } else if (computerGuess === "S") {
+                console.log("It's a tie!");
+            } else {
+                var result = "Computer wins!";
+                console.log("Computer wins!");
+        }
+
+        } else {
+
+            var result = 0;
+            alert("Stop cheating!");
+        }
+
+        if(result === "Player wins!"){
+            playerScore++;
+        } else if (result === "Computer wins!") {
+            computerScore++;
+        } else if (result === 0) {
+            games--;
+        }
+    }
+
+    if(playerScore > computerScore) {
+        alert("Player wins! " + playerScore + " vs " + computerScore);
+    } else if (computerScore > playerScore) {
+        alert("Computer wins! " + computerScore + " vs " + playerScore);
+    } else {
+        alert("It's a draw!")
+    }
+    
+    </script>
+</body>
+</html>
